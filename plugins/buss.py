@@ -13,11 +13,12 @@ class Buss(Plugin):
     def __init__(self, skype):
         super(Buss, self).__init__(skype)
         self.command = "buss"
-        self.stops = {'utsikten': ['0014103'], 'stakkevollaen': ['0014103'],
-                      'uit': ['0005213'],
-                      'wito': ['0014118', '0013889'], 'sentrum': ['0014118', '0013889'],
-                      'jekta': ['0005211', '0014139'], 'giæverbukta': ['0005211', '0014139'],
-                      'flyplassen': ['0014078'], 'langnes': ['0014078'], 'fauske': ['0103543']
+        self.stops = {
+            'utsikten': ['761077514'], 'stakkevollan': ['761077543'], 'varden': ['761077684'],
+            'uit': ['761077649'],
+            'wito': ['761077674'],
+            'jekta': ['761077476'], 'giæverbukta': ['761077661'],
+            'flyplassen': ['761077638'], 'langnes': ['761077638'], 'fauske': ['760014408']
         }
 
     def getStopId(self, stop):
