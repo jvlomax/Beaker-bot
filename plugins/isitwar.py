@@ -7,7 +7,7 @@ from apscheduler.scheduler import Scheduler
 class IsItWar(Plugin):
     def __init__(self, skype):
         super(IsItWar, self).__init__(skype)
-        self.falseMessages =["The world is still safe, Russia has not declared war yet", "http://suptg.thisisnotatrueending.com/archive/29138254/images/1388285593271.jpg", "http://www.meh.ro/original/2010_03/meh.ro3771.jpg", "http://d24w6bsrhbeh9d.cloudfront.net/photo/arpBmWp_700b_v1.jpg", "http://d24w6bsrhbeh9d.cloudfront.net/photo/aXb2VAv_700b.jpg", "http://d24w6bsrhbeh9d.cloudfront.net/photo/aLKXd6v_700b.jpg"]
+        self.falseMessages =["The world is still safe, Russia has not declared war yet", "http://suptg.thisisnotatrueending.com/archive/29138254/images/1388285593271.jpg", "http://www.meh.ro/original/2010_03/meh.ro3771.jpg", "http://d24w6bsrhbeh9d.cloudfront.net/photo/arpBmWp_700b_v1.jpg", "http://d24w6bsrhbeh9d.cloudfront.net/photo/aXb2VAv_700b.jpg", "http://d24w6bsrhbeh9d.cloudfront.net/photo/aLKXd6v_700b.jpg", "http://img-9gag-lol.9cache.com/photo/aGVZmd7_460sa_v1.gif"]
         self.sched = Scheduler()
         self.sched.start()
         self.sched.add_interval_job(self.is_it_war, minutes=10)
