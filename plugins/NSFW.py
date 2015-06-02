@@ -16,8 +16,21 @@ class NSFW(Plugin):
         self.sched.add_cron_job(self.dailyNSFW, hour=19, minute=0, day_of_week="mon-sun")
 
     def message_received(self, args, status, msg):
-        url = self.fetch_randNSFW()
-        msg.Chat.SendMessage(url)
+        num = 1
+        if args:
+            try:
+                num = int(args[0])
+            except ValueError:
+                pass
+        if num > 5:
+            num = 5
+        if num < 1:
+            num = 1
+        urls = ""
+        for i in range(0, num):
+            urls += self.fetch_randNSFW()
+            urls += "\n"
+        msg.Chat.SendMessage(urls)
 
 
     def fetch_randNSFW(self):

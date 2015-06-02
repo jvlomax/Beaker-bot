@@ -1,4 +1,5 @@
-from __future__ import print_function
+from __future__ import print_function, unicode_literals
+
 import time
 import os, sys
 import Skype4Py
